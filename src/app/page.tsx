@@ -1,5 +1,3 @@
 export default function Home() {
-  return (
-    <p>Test</p>
-  );
+  return <p className="text-primary-500 bg-black">Test</p>;
 }
