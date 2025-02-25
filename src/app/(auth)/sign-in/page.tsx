@@ -1,11 +1,19 @@
+"use client";
+
 import React from "react";
 
-interface Props {
-  /* Define your props here */
-}
+import AuthForm from "@/components/forms/AuthForm";
+import { SignInSchema } from "@/lib/validations";
 
-const SignIn = ({}: Props) => {
-  return <div>/* Your component JSX */</div>;
+const SignIn = () => {
+  return (
+    <AuthForm
+      formType="SIGN_IN"
+      schema={SignInSchema}
+      defaultValues={{ email: "", password: "" }}
+      onSubmit={(data) => Promise.resolve({ success: true, data })}
+    />
+  );
 };
 
 export default SignIn;
